@@ -92,6 +92,20 @@ func solveQuadratic(a: Double, b: Double, c: Double) {
     }
 }
 
+func tinhTienCuoc(giaMoCua: Double, giaTren1km: Double, giaDieuChinh: Double, kmDieuChinh: Double, kmDautien: Double) {
+    print("Nhập số km đã đi:")
+    guard let soKm = Double(readLine() ?? "") else { return }
+    var tienCuoc = giaMoCua
+    if soKm > kmDieuChinh {
+        tienCuoc += giaTren1km * (kmDieuChinh - kmDautien) +  giaDieuChinh * (soKm - kmDieuChinh)
+    } else {
+        if soKm > kmDautien {
+            tienCuoc += giaTren1km * (soKm - kmDautien)
+        }
+    }
+    print(tienCuoc)
+}
+
 
 //func findMax
 //Bai1()

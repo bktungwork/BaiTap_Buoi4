@@ -69,5 +69,6 @@ func Bai3() {
     let year = Int(readLine() ?? "") ?? 0
     
     previousDate(day: day, month: month, year: year)
+    nextDate(day: day, month: month, year: year)
     Bai3()
 }
